@@ -1,0 +1,38 @@
+.component {
+    height: 100%;
+    width: 100%;
+    background: url(../../img/btex.png);
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    transform: translateX(-100%);
+    // pointer-events: none;
+
+    // &_show {
+    //     pointer-events: initial;
+    // }
+}
+
+.backbut {
+    width: max-content;
+    float: right;
+    padding: 16px;
+}
+
+.svg {
+    z-index: 2;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    fill: transparent;
+    outline-width: 2px;
+    outline: none;
+    opacity: 0.66;
+    &>g[part=outlined] {
+        stroke: wheat;
+        stroke-dasharray: 8;
+        stroke-width: 4px;
+        opacity: 0.4;
+    }
+}

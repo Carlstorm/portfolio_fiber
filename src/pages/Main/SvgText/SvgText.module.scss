@@ -1,0 +1,20 @@
+.svg {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    fill: transparent;
+    outline-width: 2px;
+    outline: none;
+    &>g[part=filled] {
+        fill: rgba(255, 255, 255, 0.9);
+        width: 0;
+    }
+    &>g[part=outlined] {
+        stroke: white;
+        stroke-width: 2px;
+        opacity: 0.4;
+    }
+}

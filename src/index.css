@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #181515;
+  overflow: hidden;
+}
+
+html {
+  background: #181515;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  overflow: hidden;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+
+p, span {
+    letter-spacing: 4px;
+    margin: 0;
+    font-family: "Cabin", sans-serif;
 }
