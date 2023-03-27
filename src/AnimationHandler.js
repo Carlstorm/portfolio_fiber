@@ -23,7 +23,7 @@ export default class AnimationHandler {
         this.camera_look_vector = new Vector3(0, 0, 0)
         this.camera_look_offset = new Vector3()
         this.cameraDistance = 20
-        this.pageTransition = null
+        this.pageTransition = false
         this.pageCurrentPosition = 0
         this.pageTransitionFrame = 0
     }
@@ -48,9 +48,9 @@ export default class AnimationHandler {
         this.text_animation_function()
     }
 
-    pageTransition_animation() {
-        this.pageTransition_animation_function()
-    }
+    // pageTransition_animation() {
+    //     this.pageTransition_animation_function()
+    // }
 
     rotate_camera(camera) {
         this.camera_look_offset.x = (this.cameraDistance) * Math.sin( (this.cameraPos.x * 0.2)*this.progress );
@@ -62,9 +62,9 @@ export default class AnimationHandler {
         camera.lookAt( this.camera_look_vector );      
     }
 
-    ease(value) {
-        return .5*(Math.sin((value - .5)*Math.PI) + 1);
-    }
+    // ease(value) {
+    //     return .5*(Math.sin((value - .5)*Math.PI) + 1);
+    // }
 
     getLocalAnimationProgress(from, to) {
         const progress = ((this.progress-from)/(to-from))

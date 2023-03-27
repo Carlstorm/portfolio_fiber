@@ -27,6 +27,7 @@
     gap: 16px;
     opacity: 0.6;
     color: wheat;
+    will-change: transform;
     &>span {
         transform: translateX(12px);
     }

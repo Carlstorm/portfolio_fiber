@@ -4,6 +4,16 @@
     background-position: center;
     background-size: cover;
     height: 100vh;
+    transition: transform 1s ease;
+    transform: translateX(0%);
     will-change: transform;
-    transform: translateX(var(--translateX));
+    &_main {
+        transform: translateX(0)
+    }
+    &_work {
+        transform: translateX(-100%)
+    }
+    &_about {
+        transform: translateX(100%)
+    }
 }

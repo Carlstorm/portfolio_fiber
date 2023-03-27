@@ -1,4 +1,4 @@
-import { useFrame } from '@react-three/fiber'
+import { invalidate, useFrame } from '@react-three/fiber'
 import { useEffect } from 'react'
 
 // gets run once in canvas to utilize the useFrame hook
@@ -72,13 +72,15 @@ export function InitAnimation({animation}) {
   }
 
   useFrame(state => {
-    if (animation.pageTransition != null) {
-      animation.pageTransition_animation()
+    if (!animation.pageTransition) {
+      invalidate()
+    } else {
       return
     }
 
-    if (animation.progressNeedsUpdate)
+    if (animation.progressNeedsUpdate) {
       ScrollAnimations()
+    }
 
     if (animation.cameraNeedsUpdate)
       mouseAnimations(state.camera)

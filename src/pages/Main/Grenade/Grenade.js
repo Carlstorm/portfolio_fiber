@@ -11,7 +11,7 @@ import { Color, MeshStandardMaterial } from 'three';
 export default function Grenade({animation}) {
   const [insideMaterialState, setInsideMaterialState] = useState("Outside material")
 
-  const gltf = useLoader(GLTFLoader, '/grenade.gltf')
+  const gltf = useLoader(GLTFLoader, 'https://raw.githubusercontent.com/Carlstorm/portfolio_fiber/gh-pages/grenade.gltf')
 
   let mixer
   const grenade = useMemo(() => {

@@ -8,9 +8,10 @@ export default function ScrollIndicator({animation}) {
         if (ref.current) setScrollIndicatorAnimation()
     },[ref])
 
+    const opacityValue = 0.45
     const setScrollIndicatorAnimation = () => {
         const scrollIndicatorElm = ref.current
-        scrollIndicatorElm.style.setProperty('--opacity', `1`)
+        scrollIndicatorElm.style.setProperty('--opacity', `${opacityValue}`)
 
         const frames = 20
         let f = frames, prevAnim = "in"
@@ -21,14 +22,14 @@ export default function ScrollIndicator({animation}) {
                 if (f>frames) return
                 f += 1
                 let k = f/frames
-                scrollIndicatorElm.style.setProperty('--opacity', `${k}`)
+                scrollIndicatorElm.style.setProperty('--opacity', `${opacityValue*k}`)
                 scrollIndicatorElm.style.setProperty('--pointer-events', `initial`)
             } else {
                 if (prevAnim != "out") {prevAnim = "out"; f = 0; return}
                 if (f>frames) return
                 f += 1
                 let k = f/frames
-                scrollIndicatorElm.style.setProperty('--opacity', `${1-k}`)
+                scrollIndicatorElm.style.setProperty('--opacity', `${opacityValue*(1-k)}`)
                 scrollIndicatorElm.style.setProperty('--pointer-events', `none`)
             }
         }
@@ -40,7 +41,7 @@ export default function ScrollIndicator({animation}) {
     }
 
     return (
-        <div className={style.component} onClick={() => scrollToBottom()} ref={ref}>
+        <div className={style.component} onClick={() => scrollToBottom()} ref={ref} style={{"--opacity": `0`}}>
             <div className={style.mouse}></div>
             <p>Scroll</p>
         </div>

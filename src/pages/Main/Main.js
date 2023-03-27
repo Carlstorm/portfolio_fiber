@@ -44,7 +44,7 @@ function Main({setPage, animation}) {
                 <Menu setPage={setPage} animation={animation}/>
                 <ScrollIndicator animation={animation}/>
                 <SvgText animation={animation}/>
-                <Canvas className={style.canvas} camera={{ position: [0, 0, animation.cameraDistance] }}>
+                <Canvas frameloop="demand" className={style.canvas} camera={{ position: [0, 0, animation.cameraDistance] }}>
                     <Suspense>
                         <Environment files={hdr} />
 
