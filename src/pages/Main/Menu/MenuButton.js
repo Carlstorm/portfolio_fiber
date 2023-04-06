@@ -1,6 +1,6 @@
 import style from './Menu.module.scss'
 
-export function MenuButton({orintation, icon, onClick, text, onMouseLeave}) {
+export function MenuButton({orintation, icon, onClick, text, onMouseLeave, size}) {
 
     // const classNames = [
     //     orintation === "right" ? style.MenuButton_right : style.MenuButton_left
@@ -8,7 +8,7 @@ export function MenuButton({orintation, icon, onClick, text, onMouseLeave}) {
 
     return (
         <div className={orintation === "right" ? style.MenuButton_right : style.MenuButton_left}>
-            <div onClick={() => onClick()} onMouseLeave={() => onMouseLeave ? onMouseLeave() : null}>
+            <div onClick={() => onClick()} onMouseLeave={() => onMouseLeave ? onMouseLeave() : null} style={size ? {height: size} : {}}>
                 {icon}
             </div>
             <div>

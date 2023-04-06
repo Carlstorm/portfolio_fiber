@@ -27,7 +27,7 @@ const Loader = ({val}) => {
     )
 }
 
-function Main({setPage, animation}) {
+function Main({setPage, page, animation, disableMenu}) {
     const loading = useProgress()
     const [isLoading, setIsLoading] = useState(true)
 
@@ -41,7 +41,7 @@ function Main({setPage, animation}) {
             <Overlay animation={animation}/>
             {isLoading ? <Loader val={loading.progress} /> : null}
             <div className={isLoading ? style.fadeInit : [style.fadeInit, style.fadeInit_show].join(" ")}>
-                <Menu setPage={setPage} animation={animation}/>
+                <Menu setPage={setPage} animation={animation} disableMenu={disableMenu}/>
                 <ScrollIndicator animation={animation}/>
                 <SvgText animation={animation}/>
                 <Canvas frameloop="demand" className={style.canvas} camera={{ position: [0, 0, animation.cameraDistance] }}>
@@ -58,7 +58,7 @@ function Main({setPage, animation}) {
                         <Grenade 
                             animation={animation}
                         />
-                        <InitAnimation animation={animation} />
+                        {page === "main" ? <InitAnimation animation={animation} /> : null}
                     </Suspense>
                 </Canvas>
             </div>

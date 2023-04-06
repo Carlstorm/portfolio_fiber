@@ -74,8 +74,6 @@ export function InitAnimation({animation}) {
   useFrame(state => {
     if (!animation.pageTransition) {
       invalidate()
-    } else {
-      return
     }
 
     if (animation.progressNeedsUpdate) {

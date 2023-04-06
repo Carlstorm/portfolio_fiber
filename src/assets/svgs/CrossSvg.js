@@ -1,7 +1,7 @@
 import { forwardRef } from "react"
 
 const CrossSvg = forwardRef(({className}, ref) => (
-    <svg ref={ref} className={className} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294 288">
+    <svg ref={ref} className={className} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="45 45 200 200">
         <path d="M55.5,225c0.2-5.2,2.5-9.1,5.9-12.5c20-19.9,39.8-39.9,59.8-59.6c3.3-3.2,3.8-4.8,0.2-8.4c-20.4-19.9-40.4-40.2-60.5-60.3
             c-4.8-4.8-6.7-10.3-4.4-16.8c2.2-6,6.7-9.4,13.1-10.1c5.6-0.6,9.9,1.9,13.7,5.8c20.1,20.2,40.3,40.3,60.4,60.5
             c2.7,2.7,4.1,2.8,6.8,0c20.2-20.5,40.6-40.9,61.1-61.2c9.1-9,23-5.9,26.3,5.8c1.8,6.4-0.4,11.7-5,16.3

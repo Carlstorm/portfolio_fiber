@@ -13,17 +13,18 @@
     width: 100px;
     z-index: 9;
     cursor: pointer;
+    
+    & p {
+        letter-spacing: 8px;
+        text-indent: 6px;
+        color: wheat;
+        margin: 0;
+    }
     &:hover {
         opacity: 0.85;
     }
 }
 
-p {
-    letter-spacing: 8px;
-    text-indent: 6px;
-    color: wheat;
-    margin: 0;
-}
 
 
 .mouse {

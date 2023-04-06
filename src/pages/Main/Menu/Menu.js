@@ -6,7 +6,7 @@ import MailSvg from '../../../assets/svgs/MailSvg'
 import style from './Menu.module.scss'
 import { MenuButton } from './MenuButton'
 
-const Menu = ({setPage, animation}) => {
+const Menu = ({setPage, animation, disableMenu}) => {
     const ref = useRef(null)
     const [mailText, setMailText] = useState("Copy Mail")
 
@@ -62,9 +62,14 @@ const Menu = ({setPage, animation}) => {
         }
     }
 
+    const classList = [
+        style.component,
+        disableMenu ? style.component_disable : ""
+    ]
+
 
     return (
-        <div className={style.component} ref={ref}>
+        <div className={classList.join(" ")} ref={ref}>
             <div>
                 <MenuButton 
                     orintation="left" 

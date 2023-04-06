@@ -9,10 +9,12 @@
     outline-width: 2px;
     outline: none;
     &>g[part=filled] {
+        will-change: fill;
         fill: rgba(255, 255, 255, 0.9);
         width: 0;
     }
     &>g[part=outlined] {
+        will-change: stroke-dashoffset;
         stroke: white;
         stroke-width: 2px;
         opacity: 0.4;
