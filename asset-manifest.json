@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.css": "/portfolio_fiber/static/css/main.38b488ef.css",
-    "main.js": "/portfolio_fiber/static/js/main.9c817d8e.js",
+    "main.css": "/portfolio_fiber/static/css/main.de9cf524.css",
+    "main.js": "/portfolio_fiber/static/js/main.e75d9aff.js",
     "static/media/sunset_jhbcentral_4k.hdr": "/portfolio_fiber/static/media/sunset_jhbcentral_4k.bded15f71f1d27ffb19d.hdr",
     "static/media/port.png": "/portfolio_fiber/static/media/port.ada8091453d8492bb969.png",
     "static/media/btex.png": "/portfolio_fiber/static/media/btex.7d9e5e51a5dea89f5ea5.png",
-    "static/media/displace.png": "/portfolio_fiber/static/media/displace.672684d9cc480a977095.png",
+    "static/media/themes.gif": "/portfolio_fiber/static/media/themes.048602d1d317793f69d5.gif",
+    "static/media/displace.png": "/portfolio_fiber/static/media/displace.e16d68496b3443e136ee.png",
     "static/media/fragmentSplitting.gif": "/portfolio_fiber/static/media/fragmentSplitting.ca10e0f0c4b1bfcadb22.gif",
+    "static/media/hold.png": "/portfolio_fiber/static/media/hold.bb725d514b94bc2ce072.png",
+    "static/media/holdInterface.png": "/portfolio_fiber/static/media/holdInterface.3c1cf1e6f625fd78ece0.png",
+    "static/media/kursister.png": "/portfolio_fiber/static/media/kursister.b296ad6783dfb1dc2ef9.png",
+    "static/media/mazeDraw.jpg": "/portfolio_fiber/static/media/mazeDraw.ceba6e4ca4d8001d276c.jpg",
+    "static/media/itucation.png": "/portfolio_fiber/static/media/itucation.4e92fb0cf862ebc904da.png",
+    "static/media/env.png": "/portfolio_fiber/static/media/env.0c52bae05cba40d070ee.png",
+    "static/media/adminMenu.png": "/portfolio_fiber/static/media/adminMenu.8ba4ae75961c3d4539c0.png",
     "static/media/lab.png": "/portfolio_fiber/static/media/lab.cc02a997db3a4a7ca426.png",
     "index.html": "/portfolio_fiber/index.html",
-    "main.38b488ef.css.map": "/portfolio_fiber/static/css/main.38b488ef.css.map",
-    "main.9c817d8e.js.map": "/portfolio_fiber/static/js/main.9c817d8e.js.map"
+    "main.de9cf524.css.map": "/portfolio_fiber/static/css/main.de9cf524.css.map",
+    "main.e75d9aff.js.map": "/portfolio_fiber/static/js/main.e75d9aff.js.map"
   },
   "entrypoints": [
-    "static/css/main.38b488ef.css",
-    "static/js/main.9c817d8e.js"
+    "static/css/main.de9cf524.css",
+    "static/js/main.e75d9aff.js"
   ]
 }
