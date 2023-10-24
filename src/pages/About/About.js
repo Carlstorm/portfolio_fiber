@@ -55,7 +55,7 @@ export default function About({back, page}) {
                             <SectionTemplate>
                                 <h2>About me</h2>
                                 <p>
-                                    Hey there! I'm John, and I'm passionate about creating amazing web experiences. With a background in web development, I've always believed that the internet is a canvas for endless possibilities. My journey in this field has been driven by a desire to craft exceptional digital solutions that are not only functional but also visually appealing.
+                                    Hey there! I'm Carl, and I'm passionate about creating amazing web experiences. With a background in web development, I've always believed that the internet is a canvas for endless possibilities. My journey in this field has been driven by a desire to craft exceptional digital solutions that are not only functional but also visually appealing.
                                 </p>
                             </SectionTemplate>
                             <SectionTemplate>
