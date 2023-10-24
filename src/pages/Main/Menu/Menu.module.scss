@@ -17,6 +17,8 @@
     &>div {
         display: flex;
         justify-content: space-between;
+        position: absolute;
+        width: 100%;
     }
 
     &>span {
@@ -28,6 +30,10 @@
         opacity: 0.3;
         color: white
     }
+}
+
+.bottom {
+    bottom: 0;
 }
 
 @mixin icon {

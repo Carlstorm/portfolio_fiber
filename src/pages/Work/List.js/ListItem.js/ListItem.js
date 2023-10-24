@@ -21,7 +21,7 @@ export default function Listitem({item, setPopUp}) {
                 <p className={style.title}>{item.title}</p>
                 <div className={style.details}>
                     <div>
-                        <p className={style.type_personal}>{item.type}</p>
+                        <p className={item.type.includes("PERSONAL") ? style.type_personal : style.type_proffesional}>{item.type}</p>
                         <p>{item.date}</p>
                     </div>
                     <div>

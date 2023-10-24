@@ -21,8 +21,10 @@ export default function WorkTemplate({content, item, setPopUp}) {
         },10)
 
         window.addEventListener("keydown", event.close)
+        window.addEventListener("mousedown", event.close)
         return () => {
             window.removeEventListener("keydown", event.close)
+            window.removeEventListener("mousedown", event.close)
         }
     },[contentRef, heroRef])
 
@@ -34,7 +36,7 @@ export default function WorkTemplate({content, item, setPopUp}) {
 
     const event = {
         close: (e) => {
-            if (e.code === "Escape")
+            if (e.code === "Escape" || e.button === 3)
                 setPopUp(false)
         }
     }
@@ -65,7 +67,7 @@ export default function WorkTemplate({content, item, setPopUp}) {
                     <div className={style.container_content_wrap}>
                         <section className={style.container_content_main}>
                             <div>
-                                <p className={style.type_personal}>{item.type}</p>
+                                <p className={item.type.includes("PERSONAL") ? style.type_personal : style.type_proffesional}>{item.type}</p>
                                 <p>{item.date}</p>
                             </div>
                             <div className={style.container_content_main_links}>
@@ -95,10 +97,44 @@ export const WorkSection = ({children, title}) => {
 }
 
 export const CodeBox = ({code}) => {
-    const [open, setOpen] = useState(null)
+    const codeBoxSize = 400;
+    const [boxState, setBoxState] = useState(null)
+    const codeBoxRef = useRef(null)
+    useEffect(() => {
+        if (!codeBoxRef.current)
+            return
+
+        const boxHeight = codeBoxRef.current.getBoundingClientRect().height
+        if (boxHeight > codeBoxSize) {
+            codeBoxRef.current.classList.remove(style.codeBox_open)
+            codeBoxRef.current.classList.add(style.codeBox_closed)
+            setBoxState("closed")
+        }
+
+    },[codeBoxRef])
+
+    const event = {
+        open: () => {
+            codeBoxRef.current.classList.remove(style.codeBox_closed)
+            codeBoxRef.current.classList.add(style.codeBox_open)
+            setBoxState("open")
+        },
+        close: () => {
+            codeBoxRef.current.classList.remove(style.codeBox_open)
+            codeBoxRef.current.classList.add(style.codeBox_closed)
+            setBoxState("closed")
+        }
+    }
+
+
     return (
-        <div className={style.codeBox}>
+        <div className={style.codeBox} ref={codeBoxRef}>
             <p>{code}</p>
+            {boxState === "closed" ? 
+                <p className={style.codeBox_expand} onClick={() => event.open()}>Show more</p>
+            : boxState === "open" ?
+                <p className={style.codeBox_expand} onClick={() => event.close()}>Show less</p>
+            : null}
         </div>
     )
 }

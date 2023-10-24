@@ -8,6 +8,40 @@
     transform: translateX(-100%);
 }
 
+.page {
+
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #161616;
+        padding: 0 2px;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        background: #252424;
+        padding: 8px;
+        box-shadow: 2px 2px 8px 0 #00000033;
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #313030;
+    }
+}
+
 .backbut {
     width: max-content;
     float: right;
@@ -31,3 +65,57 @@
         opacity: 0.4;
     }
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center !important;
+    z-index: 3;
+    pointer-events: inherit;
+    padding: 62px;
+    width: calc(100% - 320px);
+    height: max-content;
+    max-width: 1000px;
+    background: #201f1fd5;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 64px 0;
+
+
+    &_section {
+        text-align: center;
+        color: grey;
+        opacity: 0;
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        &>img {
+            width: 100%;
+        }
+        &_show {
+            animation: bounce 0.33s ease forwards;
+        }
+    }
+}
+
+.menu {
+    position: absolute;
+}
+
+
+@keyframes bounce {
+	0% {transform: translateY(-30px); opacity: 0;}
+    66% {transform: translateY(5px);}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
+.img {
+    height: 240px;
+    width: 240px;;
+    border-radius: 50%;
+    align-self: center;
+    background-size: 140%;
+    background-position: 100% 10%;
+    margin-bottom: 32px;
+}
+

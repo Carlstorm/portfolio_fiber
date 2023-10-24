@@ -175,7 +175,7 @@ $hero-size: 264px;
         color: #6affc1;
     }
     &_proffesional {
-
+        color: #6aabff;
     }
 }
 
@@ -236,23 +236,34 @@ $hero-size: 264px;
         margin: 0;
     }
 
-    & li {
+    &>ol>li {
         display: flex;
         flex-direction: column;
         gap: 16px;
     }
 
-    & li:before {
+    &>ol>li:before {
         counter-increment: section;
         content: counter(section) ".";
         position: absolute;
         margin-left: -20px;
+        font-size: 14px;
+        font-weight: bold;
     }
 
     & ol {
         display: flex;
         flex-direction: column;
         gap: 16px;
+    }
+
+    & ul {
+        &>li {
+            &>h4 {
+                margin-bottom: 8px;
+            }
+            margin-bottom: 16px;
+        }
     }
 }
 
@@ -271,8 +282,34 @@ $hero-size: 264px;
     border-radius: 8px;
     padding: 32px;
     overflow: hidden;
+    position: relative;
     &>p {
         white-space: pre-wrap;
+    }
+
+    &_open {
+        padding-bottom: 64px;
+    }
+
+    &_closed {
+        max-height: 400px;
+        padding-bottom: 64px;
+    }
+
+    &_expand {
+        background: rgb(32 31 31 / 70%);
+        backdrop-filter: blur(4px);
+        bottom: 0;
+        left: 0;
+        font-size: 12px;
+        position: absolute;
+        width: calc(100% - 32px);
+        padding: 8px 16px;
+        cursor: pointer;
+
+        &:hover {
+            color: white
+        }
     }
 }
 
@@ -313,7 +350,7 @@ $hero-size: 264px;
         &_menu {
             display: flex;
             justify-content: space-between;
-            padding: 12px 16px;
+            padding: 12px 16px 10px 16px;
             font-size: 14px;
             color: gray;
             font-weight: bold;

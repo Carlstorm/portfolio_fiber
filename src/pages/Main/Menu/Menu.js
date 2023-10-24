@@ -84,7 +84,7 @@ const Menu = ({setPage, animation, disableMenu}) => {
                     text="My work"
                 />
             </div>
-            <div>
+            <div className={style.bottom}>
                 <MenuButton 
                     orintation="left" 
                     icon={<LinkedInSvg />}

@@ -37,7 +37,6 @@ export default function Work({back, page}) {
                 text="Go back"
                 size={"22px"}
             />
-            {/* {!LoadContent ? null : <WorkList setPopUp={setPopUp}/>} */}
             {!LoadContent ? null : <List setPopUp={setPopUp}/>}
         </div>
     )
