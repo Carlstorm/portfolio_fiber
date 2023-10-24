@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio_fiber/static/css/main.de9cf524.css",
-    "main.js": "/portfolio_fiber/static/js/main.e75d9aff.js",
+    "main.css": "/portfolio_fiber/static/css/main.af215327.css",
+    "main.js": "/portfolio_fiber/static/js/main.0eaaef71.js",
     "static/media/sunset_jhbcentral_4k.hdr": "/portfolio_fiber/static/media/sunset_jhbcentral_4k.bded15f71f1d27ffb19d.hdr",
     "static/media/port.png": "/portfolio_fiber/static/media/port.ada8091453d8492bb969.png",
     "static/media/btex.png": "/portfolio_fiber/static/media/btex.7d9e5e51a5dea89f5ea5.png",
@@ -15,13 +15,14 @@
     "static/media/itucation.png": "/portfolio_fiber/static/media/itucation.4e92fb0cf862ebc904da.png",
     "static/media/env.png": "/portfolio_fiber/static/media/env.0c52bae05cba40d070ee.png",
     "static/media/adminMenu.png": "/portfolio_fiber/static/media/adminMenu.8ba4ae75961c3d4539c0.png",
+    "static/media/mig.jpg": "/portfolio_fiber/static/media/mig.93b8625b06ad43ccfbbb.jpg",
     "static/media/lab.png": "/portfolio_fiber/static/media/lab.cc02a997db3a4a7ca426.png",
     "index.html": "/portfolio_fiber/index.html",
-    "main.de9cf524.css.map": "/portfolio_fiber/static/css/main.de9cf524.css.map",
-    "main.e75d9aff.js.map": "/portfolio_fiber/static/js/main.e75d9aff.js.map"
+    "main.af215327.css.map": "/portfolio_fiber/static/css/main.af215327.css.map",
+    "main.0eaaef71.js.map": "/portfolio_fiber/static/js/main.0eaaef71.js.map"
   },
   "entrypoints": [
-    "static/css/main.de9cf524.css",
-    "static/js/main.e75d9aff.js"
+    "static/css/main.af215327.css",
+    "static/js/main.0eaaef71.js"
   ]
 }
