@@ -58,7 +58,7 @@ const Menu = ({setPage, animation, disableMenu}) => {
             setPage(page)
         },
         place: () => {
-            return
+            window.open("https://www.linkedin.com/in/carl-storm/");
         }
     }
 
