@@ -5,7 +5,6 @@ import { MenuButton } from '../Main/Menu/MenuButton'
 import style from './Work.module.scss'
 
 import { useEffect, useRef, useState } from 'react'
-import WorkList from './WorkList'
 import List from './List.js/List'
 
 

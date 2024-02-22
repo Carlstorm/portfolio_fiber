@@ -1,9 +1,11 @@
 // assets
     // imgs
-        const portfolioImg = require("../../../img/port.png")
-        const labSolverImg = require("../../../img/lab.png")
-        const soundDisplacementImg = require("../../../img/displace.png")
-        const itucation = require("../../../img/itucation.png")
+    const portfolioImg = require("../../../img/port.png")
+    const labSolverImg = require("../../../img/lab.png")
+    const soundDisplacementImg = require("../../../img/displace.png")
+    const itucation = require("../../../img/itucation.png")
+    const svgtool = require("../../../img/svgtool.png")
+
     // svgs
     import JsSvg from '../../../assets/svgs/tech/JsSvg';
     import ReactSvg from '../../../assets/svgs/tech/ReactSvg';
@@ -15,13 +17,15 @@
     import PrismaSvg from '../../../assets/svgs/tech/PrismaSvg';
     import GraphqlSvg from '../../../assets/svgs/tech/GraphqlSvg';
     import ApolloSvg from '../../../assets/svgs/tech/ApolloSvg';
-    
+    import JestSvg from '../../../assets/svgs/tech/JestSvg'
+    import ReduxSvg from '../../../assets/svgs/tech/ReduxSvg'
 
 // components
     import SoundDisplacement from './SoundDisplacement/SoundDisplacement';
     import LabSolver from './LabSolver/LabSolver';
     import Port from './Port/Port';
     import Itucation from './Itucation/Itucation';
+import ReactToolsSvgConverter from './ReactToolsSvgConverter/ReactToolsSvgConverter'
 
 export const worksList = [
     {
@@ -63,6 +67,16 @@ export const worksList = [
         type: "PROFFESIONAL PROJECT",
         img: itucation,
         tech: ["JavaScript", "TypeScript", "React.js", "Sass", "GraphQL", "Prisma", "Apollo", "Sql Database", "Azure"]
+    },
+    {
+        title: "React Tools: Svg converter/formatter",
+        content: (setPopUp) => <ReactToolsSvgConverter setPopUp={setPopUp} />,
+        date: "22/02/2024",
+        demo: "https://carlstorm.github.io/react-tools/",
+        github: "https://github.com/Carlstorm/react-tools",
+        type: "PERSONAL PROJECT",
+        img: svgtool,
+        tech: ["TypeScript", "React.js", "Redux", "Jest"]
     }
 ]
 
@@ -77,6 +91,8 @@ export const getTechIcon = (title) => {
         case "Sql Database": return <SqlDatabaseSvg />;
         case "Prisma": return <PrismaSvg />;
         case "GraphQL": return <GraphqlSvg />;
-        case "Apollo": return <ApolloSvg />
+        case "Apollo": return <ApolloSvg />;
+        case "Jest": return <JestSvg />;
+        case "Redux": return <ReduxSvg />;
     }
 }
