@@ -31,10 +31,14 @@ function Main({setPage, page, animation, disableMenu}) {
     const loading = useProgress()
     const [isLoading, setIsLoading] = useState(true)
 
-    if (loading.progress >= 100)
-        setTimeout(() => {
-            setIsLoading(false)
-        }, 1000);
+    
+    useEffect(() => {
+        console.log(loading.progress)
+        if (loading.progress >= 100 && isLoading)
+            setTimeout(() => {
+                setIsLoading(false)
+            }, 300);
+    },[loading.progress])
 
     return (
         <div className={style.component}>
@@ -47,7 +51,6 @@ function Main({setPage, page, animation, disableMenu}) {
                 <Canvas frameloop="demand" className={style.canvas} camera={{ position: [0, 0, animation.cameraDistance] }}>
                     <Suspense>
                         <Environment files={hdr} />
-
                         <EffectComposer>
                             <Bloom 
                                 intensity={0.2}

@@ -48,10 +48,6 @@ export default class AnimationHandler {
         this.text_animation_function()
     }
 
-    // pageTransition_animation() {
-    //     this.pageTransition_animation_function()
-    // }
-
     rotate_camera(camera) {
         this.camera_look_offset.x = (this.cameraDistance) * Math.sin( (this.cameraPos.x * 0.2)*this.progress );
         this.camera_look_offset.z = (this.cameraDistance) * Math.cos( (this.cameraPos.x * 0.2)*this.progress );
@@ -61,10 +57,6 @@ export default class AnimationHandler {
         camera.position.copy( this.camera_look_vector ).add( this.camera_look_offset )
         camera.lookAt( this.camera_look_vector );      
     }
-
-    // ease(value) {
-    //     return .5*(Math.sin((value - .5)*Math.PI) + 1);
-    // }
 
     getLocalAnimationProgress(from, to) {
         const progress = ((this.progress-from)/(to-from))

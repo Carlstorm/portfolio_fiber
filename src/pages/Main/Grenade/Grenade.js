@@ -12,7 +12,6 @@ export default function Grenade({animation}) {
   const [insideMaterialState, setInsideMaterialState] = useState("Outside material")
 
   const link = 'https://raw.githubusercontent.com/Carlstorm/portfolio_fiber/gh-pages/grenade.gltf'
-  // const link = './grenade.gltf'
 
   const gltf = useLoader(GLTFLoader, link)
 
@@ -38,30 +37,6 @@ export default function Grenade({animation}) {
   useEffect(() => {
     ChangeInsideMaterial(insideMaterialState)
   },[insideMaterialState])
-
-  // useEffect(() => {
-  //   if (!gltf)
-  //     return
-  //   if (isLoading)
-  //     return
-
-  //   const material = new MeshStandardMaterial()
-  //   const color = new Color(0xf5deb3)
-
-
-  //   console.log(material)
-
-  //   Object.keys(gltf.nodes).forEach((key) => {
-  //     if ("material" in gltf.nodes[key]) {
-  //       gltf.nodes[key].material.wireframe = true
-  //       gltf.nodes[key].material.color = color
-  //       gltf.nodes[key].material.transparent = true
-  //       gltf.nodes[key].material.opacity = 0.1
-  //       gltf.nodes[key].material.needsUpdate = true;
-  //     }
-  //   })
-  // },[workShow])
-
 
   if (mixer)
     animation.grenade_animation_function = () => {
