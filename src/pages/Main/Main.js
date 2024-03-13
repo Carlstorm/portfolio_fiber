@@ -33,7 +33,7 @@ function Main({setPage, page, animation, disableMenu}) {
         if (loading.progress >= 100 && isLoading)
             setTimeout(() => {
                 setIsLoading(false)
-            }, 300);
+            }, 1200);
     },[loading.progress])
 
     return (
