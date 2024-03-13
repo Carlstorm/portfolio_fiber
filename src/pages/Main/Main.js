@@ -3,8 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, Html, useProgress } from '@react-three/drei'
 import Grenade from './Grenade/Grenade';
 import { Suspense, useEffect, useRef, useState } from 'react';
-import hdr from '../../assets/hdr/sunset_jhbcentral_4k.hdr'
-
+import hdr from '../../assets/hdr/sunset_jhbcentral_1k.hdr'
 import style from './Home.module.scss'
 import Overlay from './Overlay/Overlay';
 import SvgText from './SvgText/SvgText';
@@ -12,7 +11,6 @@ import {InitAnimation} from './InitAnimation';
 
 import Menu from './Menu/Menu';
 import ScrollIndicator from './ScrollIndicator/ScrollIndicator';
-
 
 const Loader = ({val}) => {
     return (
@@ -31,9 +29,7 @@ function Main({setPage, page, animation, disableMenu}) {
     const loading = useProgress()
     const [isLoading, setIsLoading] = useState(true)
 
-    
     useEffect(() => {
-        console.log(loading.progress)
         if (loading.progress >= 100 && isLoading)
             setTimeout(() => {
                 setIsLoading(false)
@@ -49,20 +45,20 @@ function Main({setPage, page, animation, disableMenu}) {
                 <ScrollIndicator animation={animation}/>
                 <SvgText animation={animation}/>
                 <Canvas frameloop="demand" className={style.canvas} camera={{ position: [0, 0, animation.cameraDistance] }}>
-                    <Suspense>
-                        <Environment files={hdr} />
-                        <EffectComposer>
-                            <Bloom 
-                                intensity={0.2}
-                                luminanceSmoothing={0.4}
-                                luminanceThreshold={0.3}
-                            />
-                        </EffectComposer>
-                        <Grenade 
-                            animation={animation}
+                <Environment files={hdr} />
+                <Suspense>
+                    <EffectComposer>
+                        <Bloom 
+                            intensity={0.2}
+                            luminanceSmoothing={0.4}
+                            luminanceThreshold={0.3}
                         />
-                        {page === "main" ? <InitAnimation animation={animation} /> : null}
-                    </Suspense>
+                    </EffectComposer>
+                    <Grenade 
+                        animation={animation}
+                    />
+                    {page === "main" && !isLoading ? <InitAnimation animation={animation} /> : null}
+                </Suspense>
                 </Canvas>
             </div>
         </div>
